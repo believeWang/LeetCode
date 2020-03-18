@@ -26,7 +26,7 @@ public class PerfectNumber {
   }
 
    private static boolean checkPerfectNumber(int num) {
-    if (num % 2 != 0) return false;
+    if (num % 2 != 0 || num == 0) return false;
     List<Integer> divisors = getDivisors(num);
     return divisors.stream().mapToInt(i -> i).sum() == num;
 
